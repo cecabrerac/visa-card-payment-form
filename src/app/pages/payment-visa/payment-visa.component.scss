@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  --primary-light: #8e8aff;
+  --primary: #655dff;
+  --primary-dark: #4f46f8;
+  --secondary: #17c9ff;
+  --alert: #ff6a96;
+  --greyLight-1: #e0ecf7;
+  --greyLight-2: #c8dbf0;
+  --greyDark-1: #92acc4;
+  --greyDark-2: #5a768f;
+}
+
+.container {
+  width: 100%;
+  padding: 12px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  overflow: auto;
+}
+
+.visaCard-and-form {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 12px;
+}
+
+.dots-and-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+}
+
+.payment-dots {
+  position: absolute;
+}
+
+.payment-shadow-dots {
+  width: 6.5rem;
+  height: 8rem;
+  background: linear-gradient(to bottom, #e0ecf700 0%, #ffffff 100%);
+  z-index: 200;
+}
+
+.card {
+  width: 320px;
+  height: 180px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #ffffff;
+  background: linear-gradient(to bottom, #17c9ff 0%, #655dff 50%);
+  box-shadow: -0.6rem 0.6rem 1.8rem #4f46f83d;
+  border: 1px solid #ffffff;
+  padding: 12px;
+}
+
+.card-logo {
+  display: flex;
+  justify-content: right;
+  justify-self: flex-end;
+  height: auto;
+}
+
+.card-logo img {
+  width: 20%;
+  height: auto;
+}
+
+.card-number {
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
+  letter-spacing: 0.12rem;
+}
+
+.cardName-cardExp {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-name {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-name h3 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+.card-name p {
+  font-size: 1rem;
+}
+
+.card-expiry {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-expiry h3 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.card-expiry div {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+// ESTILOS PARA LA PARTE DEL FORMULARIO:
+
+.form-data {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  color: #5a768f;
+}
+
+.form-data h2 {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 1.4rem;
+  font-family: "Inter", sans-serif;
+  color: #5a768f;
+}
+
+.form-detail {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 0.6rem;
+  color: #92acc4;
+}
+
+.form-exp-and-cvv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-exp {
+  width: 140px;
+}
+
+.form-cvv {
+  width: 140px;
+}
+
+.buttons {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.cancel {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #655dff;
+  color: #ffffff;
+  cursor: pointer;
+}
+.cancel:focus {
+  outline: none;
+}
+.cancel:hover {
+  background: #4f46f8;
+}
+
+.submit {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #655dff;
+  color: #ffffff;
+  cursor: pointer;
+}
+.submit:focus {
+  outline: none;
+}
+.submit:hover {
+  background: #4f46f8;
+}
+
+input {
+  // padding: 1rem 1rem 1rem 4rem;
+  border: none;
+  background: transparent;
+  border-radius: 0.6rem;
+  padding: 6px 6px 6px 30px;
+  color: #5a768f;
+  border: solid 1px #c8dbf0;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+input:hover {
+  border: 1px solid #8e8aff;
+}
+
+ion-icon {
+  position: absolute;
+  font-size: 1.4rem;
+  top: 1.7rem;
+  margin-left: 6px;
+  color: #8e8aff; //primary-light
+  stroke: #655dff; //primary
+  pointer-events: none;
+}
+
+.info {
+  top: 0;
+  left: 2.5rem;
+  color: #92acc4; //greyDark-1
+  content: "Info";
+}
+
+.form-cvv span {
+  color: white;
+}
+
+label {
+  font-size: 20px;
+}
+
+.alert {
+  font-family: "Inter", sans-serif;
+  color: #ff6a96;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 100%;
+    overflow: auto;
+  }
+  .visaCard-and-form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Mobile Device Landscape*/
+@media screen and (max-height: 380px) and (min-aspect-ratio: 7/4) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+  .visaCard-and-form {
+    display: flex;
+    flex-direction: row;
+  }
+}
