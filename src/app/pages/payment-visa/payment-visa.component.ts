@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NbDialogRef } from '@nebular/theme';
+// import { NbDialogRef } from '@nebular/theme';
 
 // IMPORT FORMBUILDER AND VALIDATORS:
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -32,19 +32,19 @@ export class PaymentVisaComponent implements OnInit {
   ///////////////////////////////////////
 
   constructor(
-    protected ref: NbDialogRef<PaymentVisaComponent>,
+    // protected ref: NbDialogRef<PaymentVisaComponent>,
     private fb: FormBuilder
   ) {}
 
   cancel() {
-    this.ref.close();
+    // this.ref.close();
   }
 
   submit(datum) {
     this.submitted = true;
     // Transforma información en formato JSON:
     this.stringifiedData = JSON.stringify(this.formData.value);
-    this.ref.close(datum);
+    // this.ref.close(datum);
   }
 
   ////////////////////////////////////////////////
