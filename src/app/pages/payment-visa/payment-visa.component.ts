@@ -37,14 +37,14 @@ export class PaymentVisaComponent implements OnInit {
   ) {}
 
   cancel() {
-    // this.ref.close();
+    this.formData.reset();
   }
 
   submit(datum) {
     this.submitted = true;
     // Transforma información en formato JSON:
     this.stringifiedData = JSON.stringify(this.formData.value);
-    // this.ref.close(datum);
+    alert(this.stringifiedData);
   }
 
   ////////////////////////////////////////////////
